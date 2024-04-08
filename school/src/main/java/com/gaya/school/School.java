@@ -1,4 +1,4 @@
-package com.gaya.student;
+package com.gaya.school;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,17 +11,13 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Student {
+public class School {
 
     @Id
     @GeneratedValue
     private Integer id;
 
-    private String firstName;
-
-    private String lastName;
+    private String name;
 
     private String email;
-
-    private Integer schoolId;
 }
