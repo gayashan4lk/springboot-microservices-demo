@@ -39,6 +39,41 @@
 				"url": "{{school-service-base-uri}}/api/v1/schools"
 			},
 			"response": []
+		},
+		{
+			"name": "Get students",
+			"id": "5e24b6b6-2595-4a1e-95d1-90ab07b32c67",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{student-service-base-uri}}/api/v1/students"
+			},
+			"response": []
+		},
+		{
+			"name": "Create student",
+			"id": "e2a2f281-b85e-455b-8255-bcae7a3b3189",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"{{$randomFirstName}}\",\r\n    \"lastName\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"schoolId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{student-service-base-uri}}/api/v1/students"
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -69,6 +104,10 @@
 		{
 			"key": "school-service-base-uri",
 			"value": "http://localhost:8070"
+		},
+		{
+			"key": "student-service-base-uri",
+			"value": "http://localhost:8090"
 		}
 	]
 }
