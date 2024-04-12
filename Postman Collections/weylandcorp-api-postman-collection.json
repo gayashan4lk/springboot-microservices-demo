@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8070/api/v1/schools",
+			"name": "Get schools",
 			"id": "38835380-fc7a-4a75-b3e2-591d0c473646",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -14,7 +14,29 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{api-base-uri}}/api/v1/schools"
+				"url": "{{school-service-base-uri}}/api/v1/schools"
+			},
+			"response": []
+		},
+		{
+			"name": "Create school",
+			"id": "88aac7b9-adda-4466-ab0c-f814f45716fe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nice School\",\r\n    \"email\": \"{{$randomEmail}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{school-service-base-uri}}/api/v1/schools"
 			},
 			"response": []
 		}
@@ -23,7 +45,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "bc29ca23-0757-4a5f-9f73-8aa05f763041",
+				"id": "ab85c796-f6d7-47cb-83b9-ec71a7598c90",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -34,7 +56,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "95fdd85c-bd80-4919-a889-43f907def2d2",
+				"id": "6ca0df66-7538-409a-aabd-533b9f7de378",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -45,7 +67,7 @@
 	],
 	"variable": [
 		{
-			"key": "api-base-uri",
+			"key": "school-service-base-uri",
 			"value": "http://localhost:8070"
 		}
 	]
