@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "0aae339d-5cbe-40dd-b456-9b48a1ab3989",
+		"name": "weylandcorp-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8070/api/v1/schools",
+			"id": "38835380-fc7a-4a75-b3e2-591d0c473646",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{api-base-uri}}/api/v1/schools"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bc29ca23-0757-4a5f-9f73-8aa05f763041",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "95fdd85c-bd80-4919-a889-43f907def2d2",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-base-uri",
+			"value": "http://localhost:8070"
+		}
+	]
+}
