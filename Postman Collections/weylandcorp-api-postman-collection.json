@@ -87,6 +87,19 @@
 				"url": "{{school-service-base-uri}}/api/v1/schools/with-students/1"
 			},
 			"response": []
+		},
+		{
+			"name": "Get students by school",
+			"id": "28138b38-0aeb-4b58-892d-2bd7abb25cc5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{student-service-base-uri}}/api/v1/students/school/1"
+			},
+			"response": []
 		}
 	],
 	"event": [
