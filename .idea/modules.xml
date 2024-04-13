@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WeylandCorp.iml" filepath="$PROJECT_DIR$/WeylandCorp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/school/school (1).iml" filepath="$PROJECT_DIR$/school/school (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/student/school (2).iml" filepath="$PROJECT_DIR$/student/school (2).iml" />
     </modules>
   </component>
 </project>
