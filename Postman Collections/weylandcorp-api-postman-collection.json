@@ -6,100 +6,112 @@
 	},
 	"item": [
 		{
-			"name": "Get schools",
-			"id": "38835380-fc7a-4a75-b3e2-591d0c473646",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{school-service-base-uri}}/api/v1/schools"
-			},
-			"response": []
-		},
-		{
-			"name": "Create school",
-			"id": "88aac7b9-adda-4466-ab0c-f814f45716fe",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Nice School\",\r\n    \"email\": \"{{$randomEmail}}\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+			"name": "School",
+			"item": [
+				{
+					"name": "Get schools",
+					"id": "38835380-fc7a-4a75-b3e2-591d0c473646",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{school-service-base-uri}}/api/v1/schools"
+					},
+					"response": []
 				},
-				"url": "{{school-service-base-uri}}/api/v1/schools"
-			},
-			"response": []
-		},
-		{
-			"name": "Get students",
-			"id": "5e24b6b6-2595-4a1e-95d1-90ab07b32c67",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{student-service-base-uri}}/api/v1/students"
-			},
-			"response": []
-		},
-		{
-			"name": "Create student",
-			"id": "e2a2f281-b85e-455b-8255-bcae7a3b3189",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"{{$randomFirstName}}\",\r\n    \"lastName\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"schoolId\": 1\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+				{
+					"name": "Create school",
+					"id": "88aac7b9-adda-4466-ab0c-f814f45716fe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nice School\",\r\n    \"email\": \"{{$randomEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{school-service-base-uri}}/api/v1/schools"
+					},
+					"response": []
 				},
-				"url": "{{student-service-base-uri}}/api/v1/students"
-			},
-			"response": []
+				{
+					"name": "Get schools with students",
+					"id": "48327c7b-6e67-4309-afe8-04db80ea4a0f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{school-service-base-uri}}/api/v1/schools/with-students/1"
+					},
+					"response": []
+				}
+			],
+			"id": "d9261ec6-5d25-4a5f-bb94-3b90dc830c7a"
 		},
 		{
-			"name": "Get schools with students",
-			"id": "48327c7b-6e67-4309-afe8-04db80ea4a0f",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{school-service-base-uri}}/api/v1/schools/with-students/1"
-			},
-			"response": []
-		},
-		{
-			"name": "Get students by school",
-			"id": "28138b38-0aeb-4b58-892d-2bd7abb25cc5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{student-service-base-uri}}/api/v1/students/school/1"
-			},
-			"response": []
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get students",
+					"id": "5e24b6b6-2595-4a1e-95d1-90ab07b32c67",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{student-service-base-uri}}/api/v1/students"
+					},
+					"response": []
+				},
+				{
+					"name": "Create student",
+					"id": "e2a2f281-b85e-455b-8255-bcae7a3b3189",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"{{$randomFirstName}}\",\r\n    \"lastName\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"schoolId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{student-service-base-uri}}/api/v1/students"
+					},
+					"response": []
+				},
+				{
+					"name": "Get students by school",
+					"id": "28138b38-0aeb-4b58-892d-2bd7abb25cc5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{student-service-base-uri}}/api/v1/students/school/1"
+					},
+					"response": []
+				}
+			],
+			"id": "7854e1b3-c554-489e-9a21-d6218a2c1647"
 		}
 	],
 	"event": [
