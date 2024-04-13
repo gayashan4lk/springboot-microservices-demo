@@ -1,4 +1,4 @@
-package com.gaya.school;
+package com.gaya.school.model.dto;
 
 import lombok.*;
 
@@ -9,10 +9,10 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FullSchoolResponse {
+public class SchoolWithStudentsDto {
     private String name;
 
     private String email;
 
-    List<Student> students;
+    List<StudentDto> students;
 }

@@ -1,6 +1,6 @@
 package com.gaya.school.client;
 
-import com.gaya.school.Student;
+import com.gaya.school.model.dto.StudentDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,5 +11,5 @@ import java.util.List;
 public interface StudentClient {
 
     @GetMapping("/school/{schoolId}")
-    List<Student> findAllBySchoolId(@PathVariable("schoolId") Integer schoolId);
+    List<StudentDto> findAllBySchoolId(@PathVariable("schoolId") Integer schoolId);
 }

@@ -1,4 +1,4 @@
-package com.gaya.school;
+package com.gaya.school.model.dto;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Student {
+public class StudentDto {
     private String firstName;
 
     private String lastName;

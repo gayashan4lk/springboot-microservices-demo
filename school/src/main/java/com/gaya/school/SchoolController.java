@@ -1,5 +1,7 @@
 package com.gaya.school;
 
+import com.gaya.school.model.dto.SchoolWithStudentsDto;
+import com.gaya.school.model.core.School;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,16 +19,16 @@ public class SchoolController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void save(@RequestBody School school) {
-        service.saveSchool(school);
+        service.save(school);
     }
 
     @GetMapping
     public ResponseEntity<List<School>> findAll() {
-        return ResponseEntity.ok(service.findAllSchools());
+        return ResponseEntity.ok(service.findAll());
     }
 
     @GetMapping("/with-students/{schoolId}")
-    public ResponseEntity<FullSchoolResponse> findSchoolsWithStudents(@PathVariable Integer schoolId) {
-        return ResponseEntity.ok(service.findSchoolsWithStudents(schoolId));
+    public ResponseEntity<SchoolWithStudentsDto> findAllWithStudents(@PathVariable Integer schoolId) {
+        return ResponseEntity.ok(service.findAllWithStudents(schoolId));
     }
 }
