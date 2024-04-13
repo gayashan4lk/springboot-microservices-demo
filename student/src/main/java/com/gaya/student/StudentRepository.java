@@ -1,5 +1,6 @@
 package com.gaya.student;
 
+import com.gaya.student.model.core.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

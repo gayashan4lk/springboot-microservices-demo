@@ -1,5 +1,6 @@
 package com.gaya.student;
 
+import com.gaya.student.model.core.Student;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

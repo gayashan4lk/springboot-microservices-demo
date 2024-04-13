@@ -1,4 +1,4 @@
-package com.gaya.student;
+package com.gaya.student.model.core;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
