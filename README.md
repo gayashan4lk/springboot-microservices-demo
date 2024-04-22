@@ -1,4 +1,6 @@
 # Spring Boot 3  Microservices demo project
+Followed tutorial:
+https://en.git.ir/udemy-master-microservices-with-spring-boot-30-and-spring-cloud/
 
 Reference: https://github.com/ali-bouali/springboot-3-micro-service-demo
 
